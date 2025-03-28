@@ -17,11 +17,13 @@ Install the package using npm:
 npm install @villdyr/domeneshop-js
 ```
 
+Using PNPM:
+
 ```bash
 pnpm add @villdyr/domeneshop-js
 ```
 
-Or using yarn:
+Using yarn:
 
 ```bash
 yarn add @villdyr/domeneshop-js
