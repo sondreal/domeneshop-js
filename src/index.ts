@@ -271,7 +271,7 @@ export class DomeneshopClient {
     }
     return this.request<HttpForward[]>({
       method: "GET",
-      url: `/domains/${domainId}/forwards`,
+      url: `/domains/${domainId}/forwards/`, // Added trailing slash
     });
   }
 
@@ -284,7 +284,7 @@ export class DomeneshopClient {
     }
     await this.request<void>({
       method: "POST",
-      url: `/domains/${domainId}/forwards`,
+      url: `/domains/${domainId}/forwards/`, // Added trailing slash
       data: forwardData,
     });
   }
@@ -299,7 +299,7 @@ export class DomeneshopClient {
     const encodedHost = encodeURIComponent(host);
     return this.request<HttpForward>({
       method: "GET",
-      url: `/domains/${domainId}/forwards/${encodedHost}`,
+      url: `/domains/${domainId}/forwards/${encodedHost}`, // No trailing slash here, as per API spec
     });
   }
 
@@ -319,7 +319,7 @@ export class DomeneshopClient {
     const encodedHost = encodeURIComponent(host);
     return this.request<HttpForward>({
       method: "PUT",
-      url: `/domains/${domainId}/forwards/${encodedHost}`,
+      url: `/domains/${domainId}/forwards/${encodedHost}`, // No trailing slash here, as per API spec
       data: forwardData,
     });
   }
@@ -331,7 +331,7 @@ export class DomeneshopClient {
     const encodedHost = encodeURIComponent(host);
     await this.request<void>({
       method: "DELETE",
-      url: `/domains/${domainId}/forwards/${encodedHost}`,
+      url: `/domains/${domainId}/forwards/${encodedHost}`, // No trailing slash here, as per API spec
     });
   }
 
