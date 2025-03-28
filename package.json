@@ -1,0 +1,46 @@
+{
+  "name": "domeneshop-js",
+  "version": "0.1.0",
+  "description": "A JavaScript/TypeScript wrapper for the Domeneshop API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc && tsc --module commonjs --outDir dist-cjs --declaration false --sourceMap false --target es2016 --moduleResolution node && mv dist-cjs/index.js dist/index.cjs && rm -rf dist-cjs",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "domeneshop",
+    "api",
+    "dns",
+    "domains"
+  ],
+  "author": "Sondre Dyrnes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sondreal/domeneshop-js.git"
+  },
+  "homepage": "https://github.com/sondreal/domeneshop-js",
+  "bugs": {
+    "url": "https://github.com/sondreal/domeneshop-js/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "axios": "^1.8.4"
+  }
+}
