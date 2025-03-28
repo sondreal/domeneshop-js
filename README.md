@@ -17,6 +17,10 @@ Install the package using npm:
 npm install @villdyr/domeneshop-js
 ```
 
+```bash
+pnpm add @villdyr/domeneshop-js
+```
+
 Or using yarn:
 
 ```bash
@@ -26,18 +30,18 @@ yarn add @villdyr/domeneshop-js
 ## Usage
 
 ```typescript
-import { Domeneshop } from "@villdyr/domeneshop-js";
+import { DomeneshopClient } from "@villdyr/domeneshop-js";
 
 // Initialize the client with your API credentials
 // You can generate credentials at https://api.domeneshop.no/auth
-const client = new Domeneshop({
-  apiToken: "YOUR_API_TOKEN",
-  apiSecret: "YOUR_API_SECRET",
+const client = new DomeneshopClient({
+  token: "YOUR_API_TOKEN",
+  secret: "YOUR_API_SECRET",
 });
 
 async function listDomains() {
   try {
-    const domains = await client.domains.listDomains();
+    const domains = await client.listDomains();
     console.log("Domains:", domains);
   } catch (error) {
     console.error("Error fetching domains:", error);
