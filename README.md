@@ -1,6 +1,6 @@
 # domeneshop-js
 
-[![npm version](https://badge.fury.io/js/domeneshop-js.svg)](https://badge.fury.io/js/domeneshop-js)
+[![npm version](https://badge.fury.io/js/%40villdyr%2Fdomeneshop-js.svg)](https://badge.fury.io/js/%40villdyr%2Fdomeneshop-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A JavaScript/TypeScript wrapper for the [Domeneshop API](https://api.domeneshop.no/docs/).
@@ -14,19 +14,19 @@ This library provides a convenient way to interact with the Domeneshop API using
 Install the package using npm:
 
 ```bash
-npm install domeneshop-js
+npm install @villdyr/domeneshop-js
 ```
 
 Or using yarn:
 
 ```bash
-yarn add domeneshop-js
+yarn add @villdyr/domeneshop-js
 ```
 
 ## Usage
 
 ```typescript
-import { Domeneshop } from "domeneshop-js";
+import { Domeneshop } from "@villdyr/domeneshop-js";
 
 // Initialize the client with your API credentials
 // You can generate credentials at https://api.domeneshop.no/auth
