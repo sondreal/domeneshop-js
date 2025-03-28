@@ -1,5 +1,5 @@
 {
-  "name": "domeneshop-js",
+  "name": "@villdyr/domeneshop-js",
   "version": "0.1.0",
   "description": "A JavaScript/TypeScript wrapper for the Domeneshop API",
   "main": "dist/index.js",
@@ -30,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sondreal/domeneshop-js.git"
+    "url": "git+https://github.com/sondreal/domeneshop-js.git"
   },
   "homepage": "https://github.com/sondreal/domeneshop-js",
   "bugs": {
